@@ -4,6 +4,7 @@ Hello there! 👋 We're thrilled you're here and thinking of contributing to our
 
 ## 👶 Beginners Welcome! 
 *Start with filling entry in entry.html (check issues section for more details)*
+
 Are you new to open-source? No worries! 💡 We appreciate everyone, especially beginners. This project is a great place to start, contribute, and get hands-on experience. 🚀
 - **View our issues** 👉 [Click here](https://github.com/GeekGiggle/hacktoberfest/issues)
 - **Fork this repo** to get started, and remember to participate in **Hacktoberfest 2024**! 🎃💻
