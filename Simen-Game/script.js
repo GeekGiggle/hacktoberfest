@@ -1,7 +1,7 @@
 let gameSeq = [];
 let userSeq = [];
 
-let btns = ["yellow", "red", "purple", "green"];
+let btns = ["blue", "pink", "green", "yellow"];
 
 let started = false;
 let level = 0;

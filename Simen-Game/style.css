@@ -1,5 +1,6 @@
 body{
     text-align: center;
+    background-color: aquamarine;
 }
 
 .btn{
@@ -15,20 +16,20 @@ body{
     justify-content: center;
 }
 
-.yellow{
-    background-color: #e4e46a;
+.pink{ 
+    background-color: #e46aca;
 }
 
-.red{
-    background-color: #ef5151;
+.blue{
+    background-color: #519bef;
 }
 
 .green{
     background-color: #5fe766;
 }
 
-.purple{
-    background-color: #c581f9;
+.yellow{
+    background-color: #ceec6c;
 }
 
 .flash{
