@@ -1,0 +1,107 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 400px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.input-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+#todo-input {
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #ffffff;
+    color: #333;
+}
+
+#submit {
+    padding: 10px;
+    border: none;
+    background: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#submit:hover {
+    background: #0056b3;
+}
+
+.todo-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    transition: background 0.3s;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.todo-item:hover {
+    background: #e9ecef;
+}
+
+.todo-item .text {
+    flex: 1;
+    padding: 0 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+.todo-item .action-items {
+    display: flex;
+    gap: 10px;
+}
+
+.todo-item .done {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.fa {
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.fa-check {
+    color: green;
+}
+
+.fa-trash {
+    color: red;
+}
+
+.fa-pen-to-square {
+    color: blue;
+}
+
+.fa-x {
+    color: orange;
+}
