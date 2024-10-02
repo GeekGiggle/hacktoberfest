@@ -1,0 +1,89 @@
+        /* General reset and base styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            flex-direction: column;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        #set_winning_score {
+            font-size: 1.2rem;
+            padding: 10px;
+            border-radius: 5px;
+            border: 2px solid #333;
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
+
+        button {
+            background-color: #5b8c5a;
+            color: white;
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #497a45;
+        }
+
+        button:active {
+            transform: scale(0.98);
+        }
+
+        #reset_btn {
+            background-color: #d95f5f;
+        }
+
+        #reset_btn:hover {
+            background-color: #b74d4d;
+        }
+
+        #p1_score_display, #p2_score_display {
+            font-size: 3rem;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        /* Styling for winner and loser classes */
+        .winner {
+            color: green;
+            font-size: 3.5rem;
+        }
+
+        .loser {
+            color: red;
+            font-size: 3.5rem;
+        }
+
+        /* Responsive design for smaller screens */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            button {
+                font-size: 0.9rem;
+                padding: 8px 15px;
+            }
+        }
