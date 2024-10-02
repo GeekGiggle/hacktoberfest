@@ -1,0 +1,182 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Draw and Sign!</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <style>
+      .main{
+        position : absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+      }
+      .top, .bottom{
+        display: flex;
+        flex: row;
+        justify-content: space-between;
+        margin: 20px 0 20px 0
+      }
+      
+      .block, input, select, button{
+        width: 80%;
+
+      }
+      .top>block{
+        margin:10px;
+      }
+      .bottom>button{
+        margin:10px;
+
+      }
+      .block>p{
+        margin:10px auto;
+        width: 50%;
+      }
+      .canvas{
+        border: 2px solid black;
+      }
+      
+#retrieveButton{
+  color:white;
+}
+.DrawandSign {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+        font-size: 3em;
+        /* font-weight: bolder; */
+        font-family: 'Roboto', sans-serif;
+        background: linear-gradient(90deg, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 100%);
+        -webkit-background-clip: text;
+        color: transparent;
+      }
+
+
+    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="DrawandSign">
+      <p>DRAW & SIGN</p>
+    </div>
+    <div class="main">
+      <div class="top">
+        <div class="black">
+          <p> Pen Colour</p>
+          <input class="form-control" type="color" id="colorPicker" />
+        </div>
+        <div class="black">
+          <p>Background Colour</p>
+          <input class="form-control" type="color" id="canvasColor" />
+        </div>
+        <div class="black">
+          <p>Pen Size</p>
+          <select id="fontPicker" class="form-control">
+            <option value="5">5px</option>
+            <option value="10">10px</option>
+            <option value="20">20px</option>
+            <option value="30">30px</option>
+            <option value="40">40px</option>
+            <option value="50">50px</option>
+            </select>
+
+        </div>
+      </div>
+      <canvas class="canvas" id="myCanvas" width="800" height="500"></canvas>
+
+
+      <div class="bottom">
+        <button type="button" class="btn btn-danger" id="clearButton">Clear
+        </button>
+        <button type="button" class="btn btn-success" id="saveButton">Save & Download
+        </button>
+        <button type="button" class="btn btn-warning" id="retrieveButton">Retrieve Saved Sign
+        </button>
+      </div>
+    </div>
+    <script>
+      const colorPicker=document.getElementById('colorPicker');
+      const canvasColor=document.getElementById('canvasColor');
+      const canvas=document.getElementById('myCanvas');
+      const clearButton= document.getElementById('clearButton');
+      const saveButton= document.getElementById('saveButton');
+      const retrieveButton= document.getElementById('retrieveButton');
+      const fontPicker= document.getElementById('fontPicker');
+      const ctx = canvas.getContext('2d');
+
+      let isDrawing = false;
+      let lastX = 0;
+      let lastY = 0;
+
+      colorPicker.addEventListener('change', (e)=>{
+        ctx.strokeStyle=e.target.value;
+        ctx.fillStyle=e.target.value;
+      })
+
+      canvas.addEventListener('mousedown', (e)=>{
+        isDrawing=true;
+        lastX = e.offsetX;
+        lastY = e.offsetY;
+      })
+
+      canvas.addEventListener('mousemove', (e)=>{
+        if(isDrawing){
+          ctx.beginPath();
+          ctx.moveTo(lastX, lastY);
+          ctx.lineTo(e.offsetX, e.offsetY);
+          ctx.stroke();
+          lastX=e.offsetX;
+          lastY=e.offsetY;
+        }
+      })
+
+      canvas.addEventListener('mouseup', ()=>{
+        isDrawing=false;
+      })
+
+      canvasColor.addEventListener('change',(e)=>{
+        ctx.fillStyle=e.target.value;
+        ctx.fillRect(0,0,800,500);
+      })
+
+      fontPicker.addEventListener('change', (e)=>{
+        ctx.lineWidth = parseInt(e.target.value);
+      })
+
+      clearButton.addEventListener('click', ()=>{
+        ctx.clearRect(0,0,canvas.width, canvas.height);
+      })
+
+      saveButton.addEventListener('click', ()=>{
+        localStorage.setItem('canvasContents', canvas.toDataURL());
+
+        let link=document.createElement('a');
+        link.download = 'my-canvas.png';
+        link.href=canvas.toDataURL();
+        link.click();
+      })
+
+      retrieveButton.addEventListener('click', ()=>{
+        let savedCanvas=localStorage.getItem('canvasContents');
+        if(savedCanvas){
+          let img= new Image();
+          img.src=savedCanvas;
+          img.onload = function() {
+            ctx.drawImage(img,0,0);
+          }
+        }
+      })
+
+      // Initialize default values
+      ctx.strokeStyle = colorPicker.value;
+      ctx.lineWidth = parseInt(fontPicker.value);
+      ctx.fillStyle = canvasColor.value;
+      ctx.fillRect(0,0,800,500);
+    </script>
+  </body>
+</html>
