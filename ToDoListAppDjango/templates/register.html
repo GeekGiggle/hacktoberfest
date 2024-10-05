@@ -1,0 +1,40 @@
+{% extends "base.html" %} 
+
+{% block content %}
+
+<body>
+
+    <div class="container">
+        <div class="form-wrapper">
+            <div class="form-title">Sign Up ToDoApp</div>
+            <form method="POST" action="{% url 'register' %}">
+                {% csrf_token %}
+                <div>
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" value="{{username}}" placeholder="Enter your username" required>
+                </div>
+                <div>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password"  value="{{password}}" placeholder="Enter your password" required>
+                </div>
+                <div>
+                    <label for="confirm_password">Confirm Password:</label>
+                    <input type="password" id="confirm_password" name="confirm_password" value="{{confirm_password}}" placeholder="Confirm your password" required>
+                </div>
+                {% if error %}
+                <h4 style="color:red;">{{error}}</h4>
+                {% endif %}
+
+                <div>
+                    <button type="submit" class="button">Register</button>
+                </div>
+            </form>
+            <div class="already-registered">
+              <p>Already registered? <a href="{% url 'login' %}">Login here</a></p>
+          </div>
+        </div>
+    </div>
+
+</body>
+
+{% endblock content %}
