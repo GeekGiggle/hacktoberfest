@@ -33,13 +33,22 @@ function Timer() {
 }
 
 function makeBubble() {
-    var clutter = ""
+    var bubbleContainer = document.querySelector(".pbottom");
+    bubbleContainer.innerHTML = ""; // Clear existing bubbles
+
+    var fragment = document.createDocumentFragment();
+
     for (var i = 1; i <= 119; i++) {
-        var rn = Math.floor(Math.random() * 10)
-        clutter += `<div class="bubble">${rn}</div>`
+        var rn = Math.floor(Math.random() * 10);
+        var bubble = document.createElement("div");
+        bubble.classList.add("bubble");
+        bubble.textContent = rn;
+        fragment.appendChild(bubble);
     }
-    document.querySelector(".pbottom").innerHTML = clutter
+
+    bubbleContainer.appendChild(fragment);
 }
+
 
 document.querySelector(".pbottom").addEventListener("click",function(details){
     var press = Number(details.target.textContent);
