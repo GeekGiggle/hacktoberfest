@@ -49,20 +49,32 @@ function calculate(){
 }
 
 function changeTheme() {
-    const theme = document.getElementById("theme");
-    setTimeout(() => {
-      toast.innerHTML = "Calculator";
-    }, 1500);
-    if (theme.getAttribute("href") === lightTheme) {
-      theme.setAttribute("href", darkTheme);
-      themeIcon.setAttribute("src", sunIcon);
-      
-    } else {
-      theme.setAttribute("href", lightTheme);
-      themeIcon.setAttribute("src", moonIcon);
-      
-    }
+  const theme = document.getElementById("theme");
+  const currentTheme = theme.getAttribute("href");
+
+  if (currentTheme === lightTheme) {
+    theme.setAttribute("href", darkTheme);
+    themeIcon.setAttribute("src", sunIcon);
+    localStorage.setItem("theme", "dark");
+  } else {
+    theme.setAttribute("href", lightTheme);
+    themeIcon.setAttribute("src", moonIcon);
+    localStorage.setItem("theme", "light");
   }
+}
+
+// Check local storage and apply theme on page load
+window.onload = function () {
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme === "dark") {
+    theme.setAttribute("href", darkTheme);
+    themeIcon.setAttribute("src", sunIcon);
+  } else {
+    theme.setAttribute("href", lightTheme);
+    themeIcon.setAttribute("src", moonIcon);
+  }
+}
+
 
   //Author - Prashant Jagtap
   

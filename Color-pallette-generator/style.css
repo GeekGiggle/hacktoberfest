@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
+}
+
+.palette {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.color {
+    width: 100px;
+    height: 150px;
+    margin: 0 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.hex-code {
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.lock-btn {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+#generate-btn {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
