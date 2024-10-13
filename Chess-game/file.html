@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Chess Game</title>
+    <style>
+        #chessboard {
+            width: 400px;
+            height: 400px;
+            border: 2px solid #333;
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+        }
+        .square {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            cursor: pointer;
+        }
+        .white {
+            background-color: #f0d9b5;
+        }
+        .black {
+            background-color: #b58863;
+        }
+        .selected {
+            background-color: #7cfc00;
+        }
+    </style>
+</head>
+<body>
+    <div id="chessboard"></div>
+    <p id="status">White's turn</p>
+
+    <script>
+        const board = document.getElementById('chessboard');
+        const statusDisplay = document.getElementById('status');
+        let selectedPiece = null;
+        let currentPlayer = 'white';
+
+        const initialBoard = [
+            ['♜', '♞', '♝', '♛', '♚', '♝', '♞', '♜'],
+            ['♟', '♟', '♟', '♟', '♟', '♟', '♟', '♟'],
+            ['', '', '', '', '', '', '', ''],
+            ['', '', '', '', '', '', '', ''],
+            ['', '', '', '', '', '', '', ''],
+            ['', '', '', '', '', '', '', ''],
+            ['♙', '♙', '♙', '♙', '♙', '♙', '♙', '♙'],
+            ['♖', '♘', '♗', '♕', '♔', '♗', '♘', '♖']
+        ];
+
+        function createBoard() {
+            for (let i = 0; i < 8; i++) {
+                for (let j = 0; j < 8; j++) {
+                    const square = document.createElement('div');
+                    square.className = `square ${(i + j) % 2 === 0 ? 'white' : 'black'}`;
+                    square.dataset.row = i;
+                    square.dataset.col = j;
+                    square.textContent = initialBoard[i][j];
+                    square.addEventListener('click', handleClick);
+                    board.appendChild(square);
+                }
+            }
+        }
+
+        function handleClick(event) {
+            const square = event.target;
+            const row = parseInt(square.dataset.row);
+            const col = parseInt(square.dataset.col);
+
+            if (selectedPiece) {
+                if (isValidMove(selectedPiece, square)) {
+                    movePiece(selectedPiece, square);
+                    selectedPiece.classList.remove('selected');
+                    selectedPiece = null;
+                    currentPlayer = currentPlayer === 'white' ? 'black' : 'white';
+                    statusDisplay.textContent = `${currentPlayer.charAt(0).toUpperCase() + currentPlayer.slice(1)}'s turn`;
+                } else {
+                    selectedPiece.classList.remove('selected');
+                    selectedPiece = null;
+                }
+            } else if (square.textContent && isPieceOfCurrentPlayer(square.textContent)) {
+                selectedPiece = square;
+                selectedPiece.classList.add('selected');
+            }
+        }
+
+        function isValidMove(from, to) {
+            // This is a simplified version. In a real chess game, you'd need to implement all the rules for each piece.
+            return from !== to && (to.textContent === '' || isPieceOfOpponentPlayer(to.textContent));
+        }
+
+        function movePiece(from, to) {
+            to.textContent = from.textContent;
+            from.textContent = '';
+        }
+
+        function isPieceOfCurrentPlayer(piece) {
+            return (currentPlayer === 'white' && piece.charCodeAt(0) >= 9812 && piece.charCodeAt(0) <= 9817) ||
+                   (currentPlayer === 'black' && piece.charCodeAt(0) >= 9818 && piece.charCodeAt(0) <= 9823);
+        }
+
+        function isPieceOfOpponentPlayer(piece) {
+            return (currentPlayer === 'black' && piece.charCodeAt(0) >= 9812 && piece.charCodeAt(0) <= 9817) ||
+                   (currentPlayer === 'white' && piece.charCodeAt(0) >= 9818 && piece.charCodeAt(0) <= 9823);
+        }
+
+        createBoard();
+    </script>
+</body>
+</html>
