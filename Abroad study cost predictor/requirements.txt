@@ -1,0 +1,5 @@
+pandas
+lightgbm 
+scikit-learn 
+hyperopt 
+streamlit
