@@ -5,8 +5,7 @@ body {
 }
 
 nav::before {
-    background: url('pexels-miguel-á-padriñán-19670.jpg') no-repeat center center/cover;
-    content: "";
+    background-image: linear-gradient(to right top, #00032f, #003056, #005a79, #318597, #66b2b2);content: "";
     position: fixed;
     top: 0;
     left: 0;
@@ -33,7 +32,8 @@ nav::before {
     display: inline-block;
     width: 30vw;
     margin: 25vh auto;
-    background-color: #7091F5;
+    background-color: #E0F7FA;
+    border: #66B2B2 solid 1px;
 
 }
 
@@ -114,27 +114,48 @@ input[type="checkbox"]:checked+label {
     border-radius: 10px;
     width: 50%;
     cursor: pointer;
-    box-shadow: 2px 2px 10px black;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
-
 
 
 
 
 .submit-btn1 {
-    background-color: #FFFD8C;
-    color: rgb(0, 0, 0);
-    border: none;
-    padding: 5px;
-    border-radius: 12px;
+    margin-top: 30px !important;
+    padding: 15px ;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    max-width: 140px !important;
+    border-radius: 10px;
+    display: block;
+    border: 0px;
+    font-weight: 700;
+    box-shadow: 0px 0px 14px -7px #f09819;
+    background-image: linear-gradient(45deg, #FF512F 0%, #F09819  51%, #FF512F  100%);
     cursor: pointer;
-    box-shadow: 2px 2px 10px black;
-}
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    }
+    
+    .submit-btn1:hover {
+    background-position: right center;
+    /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+    }
+    
+    .submit-btn1:active {
+    transform: scale(0.95);
+    }
 
 
 
 /* Quizz Styling */
-
+H
 #quiz-form {
     width: 60%;
     overflow: hidden;
@@ -238,7 +259,7 @@ input[type="radio"]:checked+label {
 
     margin: 10% auto;
     padding: 3%;
-    background-color: #7091F5;
+    background-color: #66B2B2;
 
     border-radius: 15px;
 }
@@ -322,11 +343,11 @@ h3 {
 }
 
 .green {
-    background-color: lime;
+    background-color:#7FFFD4;
 }
 
 .red {
-    background-color: red;
+    background-color: #FF4545;
 }
 
 .orange {
