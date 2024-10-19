@@ -275,11 +275,11 @@ function changeoptioncolors() {
   let wrans = [];
   let i = 0;
   selectedWrongAnswers.forEach(function (classnm) {
-    document.querySelector("." + classnm).style.backgroundColor = "red";
+    document.querySelector("." + classnm).style.backgroundColor = "#FF4545";
     wrans.push(parseInt(classnm[3]));
   });
   CorrectAnswers.forEach(function (classnm) {
-    document.querySelector("." + classnm).style.backgroundColor = "lime";
+    document.querySelector("." + classnm).style.backgroundColor = "#7FFFD4";
     if (
       !selectedCorrectAnswers.includes(classnm) &&
       wrans[i++] != parseInt(classnm[3])
