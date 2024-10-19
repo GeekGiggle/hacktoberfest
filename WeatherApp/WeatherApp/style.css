@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Georgia, serif;
+    box-sizing: border-box;
+}
+
+.bg{
+    background-image: url('https://images.news18.com/ibnlive/uploads/2023/04/pti03_30_2023_000197b-16805735963x2.jpg');
+}
+
+.weatherApp{
+    background: linear-gradient(135deg,rgb(76, 145, 132),rgb(113, 165, 113));
+    width : 90%;
+    max-width : 470px;
+    color: #fff;
+    margin: 100px auto 0px;
+    padding: 40px 35px ;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.firstRow{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.inputBox{
+    background: #ebfffc;
+    border-radius: 30px;
+    outline: none;
+    border: none;
+    flex: 1;
+    padding: 10px 25px;
+    height: 60px;
+    margin-right: 16px;
+    font-size: 18px;
+}
+.searchButton{
+    background: #ebfffc;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    height: 60px;
+    width: 60px;
+    cursor: pointer;
+}
+
+.searchButton img{
+    width: 25px;
+}
+
+.details{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.weather{
+    display: none;
+}
+
+.weather h1{
+    font-size: 35px;
+    font-weight: 500;
+}
+
+
+.weather h2{
+    font-size: 35px;
+    font-weight: 400;
+    margin-top: 10px;
+}
+
+.weather-icon{
+    width: 170px;
+    margin-top: 30px;
+}
+
+.col{
+    display: flex;
+    justify-content: space-between;
+}
+
+.col img{
+    width: 40px;
+    margin-right: 10px;
+}
+
+
+.col2{
+    display: flex;
+}
+
+.col2 img{
+    width: 40px;
+    margin-right: 10px;
+}
+
+.windy,.humid{
+    font-size: 20px;
+    margin-top: -6px;
+}
+
+.humidity{
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+.wind{
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+.error{
+    text-align: left;
+    margin-top: 10px;
+    margin-left: 10px;
+    font-size: 14px;
+    display: none;
+}
