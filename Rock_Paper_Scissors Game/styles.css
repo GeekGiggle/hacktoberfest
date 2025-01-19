@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #74ebd5 0%, #acb6e5 100%);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+}
+
+h1 {
+    font-size: 2.2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Scoreboard */
+.score-board {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.score {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+/* Hands and Animations */
+.hands {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.hand {
+    width: 100px;
+    transition: transform 0.5s;
+}
+
+.hand.active {
+    transform: rotate(0) scale(1.2);
+}
+
+/* Result Face */
+.result-face {
+    width: 60px;
+    margin-bottom: 10px;
+}
+
+.result h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+/* Choices Styling */
+.choices {
+    display: flex;
+    justify-content: space-between;
+}
+
+.choice {
+    background-color: #f8f9fa;
+    border: none;
+    padding: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.choice img {
+    width: 60px;
+    height: 60px;
+}
+
+.choice:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .game-container {
+        padding: 20px;
+    }
+
+    .choice img {
+        width: 50px;
+        height: 50px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .score-board {
+        flex-direction: column;
+    }
+
+    .hand {
+        width: 80px;
+    }
+}

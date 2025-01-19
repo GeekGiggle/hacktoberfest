@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors with Animation</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="game-container">
+      <h1>Rock Paper Scissors</h1>
+
+      <div class="score-board">
+        <div class="score">
+          <h3>Player Score: <span id="player-score">0</span></h3>
+        </div>
+        <div class="score">
+          <h3>Computer Score: <span id="computer-score">0</span></h3>
+        </div>
+      </div>
+
+      <div class="hands">
+        <img
+          src="https://img.freepik.com/premium-vector/cheerful-young-individual-with-bright-smile-showcases-lively-personality-flat-design-young-happy-customizable-flat-illustration_538213-138298.jpg"
+          alt="Player Avatar"
+          id="player-hand"
+          class="hand"
+        />
+        <img
+          src="https://img.freepik.com/free-vector/graident-ai-robot-vectorart_78370-4114.jpg"
+          alt="Computer Avatar"
+          id="computer-hand"
+          class="hand"
+        />
+      </div>
+
+      <div class="result">
+        <video
+          id="result-face"
+          src="https://cdn-icons-mp4.freepik.com/512/11175/11175791.mp4"
+          autoplay
+          loop
+          playsinline
+          width="80"
+          height="80"
+          title="Party Basic Accent Lineal Color icon"
+        ></video>
+        <h2 id="result-message">Make Your Move!</h2>
+      </div>
+
+      <div class="choices">
+        <button class="choice" id="rock">
+          <img
+            src="https://cdn-icons-png.flaticon.com/256/11260/11260402.png"
+            alt="Rock"
+          />
+        </button>
+        <button class="choice" id="paper">
+          <img
+            src="https://cdn-icons-png.flaticon.com/256/15591/15591389.png"
+            alt="Paper"
+          />
+        </button>
+        <button class="choice" id="scissors">
+          <img
+            src="https://cdn-icons-png.flaticon.com/256/16658/16658555.png"
+            alt="Scissors"
+          />
+        </button>
+      </div>
+
+      <audio id="win-sound">
+        <source src="win-sound.wav" type="audio/wav" />
+      </audio>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
