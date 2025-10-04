@@ -1,0 +1,10 @@
+{
+  "name": "starlit-cli",
+  "version": "1.0.0",
+  "description": "Small CLI that draws magical ASCII constellations.",
+  "bin": {
+    "starlit": "./index.js"
+  },
+  "author": "hacktober-contributor",
+  "license": "MIT"
+}
