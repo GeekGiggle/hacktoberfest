@@ -1,4 +1,4 @@
-# 🎉 Welcome to Hacktoberfest 2024! 🎉
+# 🎉 Welcome to Hacktoberfest 2025! 🎉
 
 Hello there! 👋 We're thrilled you're here and thinking of contributing to our project. Whether you're a seasoned open-source contributor or just starting out, your contributions are highly appreciated! 🙌
 
@@ -87,13 +87,13 @@ We’ve labeled certain issues to help you get started:
 
 - **`good first issue`**: Great for beginners to tackle.
 - **`help wanted`**: Issues where we could really use some help!
-- **`hacktoberfest`**: Contribute to these during Hacktoberfest 2024!
+- **`hacktoberfest`**: Contribute to these during Hacktoberfest 2025!
 
 ---
 
 ## 🎃 Hacktoberfest 2024 - Let's Get Involved! 💻🎉
 
-We're proudly participating in **Hacktoberfest 2024**! 🌍 Whether you're a newbie or a pro, we welcome contributions that help grow the project and the community. Contributions must be made between **October 1st and October 31st, 2024**.
+We're proudly participating in **Hacktoberfest 2025**! 🌍 Whether you're a newbie or a pro, we welcome contributions that help grow the project and the community. Contributions must be made between **October 1st and October 31st, 2025**.
 
 - Start with a **good first issue**.
 - Feel free to ask questions in the issue comments if you need clarification.
