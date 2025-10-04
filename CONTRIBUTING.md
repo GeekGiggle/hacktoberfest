@@ -1,11 +1,11 @@
-# 🎉 Welcome to Hacktoberfest 2024! 🎉
+# 🎉 Welcome to Hacktoberfest 2025! 🎉
 
 Hello there! 👋 We're thrilled you're here and thinking of contributing to our project. Whether you're a seasoned open-source contributor or just starting out, your contributions are highly appreciated! 🙌
 
 ## 👶 Beginners Welcome!
 Are you new to open-source? No worries! 💡 We appreciate everyone, especially beginners. This project is a great place to start, contribute, and get hands-on experience. 🚀
 - **View our issues** 👉 [Click here](https://github.com/GeekGiggle/hacktoberfest/issues)
-- **Fork this repo** to get started, and remember to participate in **Hacktoberfest 2024**! 🎃💻
+- **Fork this repo** to get started, and remember to participate in **Hacktoberfest 2025**! 🎃💻
 
 This repository is perfect for **beginners** in open-source, and we invite you to add **any beginner-level project** in the tech stack you’re most comfortable with. Whether you’re working on JavaScript, ReactJS, Python, or even Data Projects, you’re welcome to submit your work! 💻
 
@@ -85,13 +85,13 @@ We’ve labeled certain issues to help you get started:
 
 - **`good first issue`**: Great for beginners to tackle.
 - **`help wanted`**: Issues where we could really use some help!
-- **`hacktoberfest`**: Contribute to these during Hacktoberfest 2024!
+- **`hacktoberfest`**: Contribute to these during Hacktoberfest 2025!
 
 ---
 
-## 🎃 Hacktoberfest 2024 - Let's Get Involved! 💻🎉
+## 🎃 Hacktoberfest 2025 - Let's Get Involved! 💻🎉
 
-We're proudly participating in **Hacktoberfest 2024**! 🌍 Whether you're a newbie or a pro, we welcome contributions that help grow the project and the community. Contributions must be made between **October 1st and October 31st, 2024**.
+We're proudly participating in **Hacktoberfest 2025**! 🌍 Whether you're a newbie or a pro, we welcome contributions that help grow the project and the community. Contributions must be made between **October 1st and October 31st, 2025**.
 
 - Start with a **good first issue**.
 - Feel free to ask questions in the issue comments if you need clarification.
